@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+:root{
+    --body-fonts : "Open Sans", sans-serif;
+
+    /*========== Colors ==========*/
+    --brand-primary-color:  #470e75;      
+    --brand-secondary-color: #8b3ccb;  
+    --tertairy-color: #c8fffd;    
+    --accent-color-yellow: #ffb836;
+    --accent-color-green: #56cdad;        
+    --background-color: #ecf0f1;   
+    --text-color: #2c3e50;     
+
+}
+h1{
+    font-family: var(--body-fonts);
+    font-weight: 72px;
+    font-weight: bold;
+}
+
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0;
+    z-index: var(--z-fixed);
+    transition: box-shadow .4s;
+}
+
+ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+.container{
+    max-width: 1039px;
+    margin-inline: 1.5rem;
+    align-self: center;
+    margin: auto;
+}
+
+.nav{
+   
+    position: relative;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    column-gap: 4rem;
+}
+.nav-logo img{
+    width: 28px;
+}
+.nav-list{
+    padding-right: 10px;
+    position: relative;
+    display: flex;
+    text-align: center;
+    column-gap: 3rem;
+}
+.nav-list-button{
+    align-items: center;
+    padding-right: 10px;
+    position: relative;
+    display: flex;
+    text-align: center;
+    column-gap: .5rem;
+}
+.nav-list-button li a:hover{
+  text-decoration: underline;
+}
+
+.bar{
+    width: 1px;
+    height: 18px;
+    background-color:#d1e1f4;;
+}
+
+.nav-link{
+    text-align: center;
+    color: var(--text-color);
+    font-family: var(--body-fonts);
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+}
+.nav-link::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: var(--brand-primary-color);
+    position: absolute;
+    bottom: -1rem;
+    left: 0px;
+    transition: width .5s;
+}
+.nav-link:hover::after{
+    width: 100%;
+}
+
+.nav-link-active{
+    text-align: center;
+    color: var(--text-color);
+    font-family: var(--body-fonts);
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+}
+
+.nav-link-active::after{
+    content: "";
+    width: 80%;
+    height: 2px;
+    background: var(--brand-primary-color);
+    position: absolute;
+    bottom: -1rem;
+    left: 0px;
+    transition: width .5s;
+
+}
+.nav-link-active:hover:after{
+    
+    width: 100%;
+    
+    
+}
+.nav-link-button{
+    text-align: center;
+    color: var(--brand-primary-color);
+    font-family: var(--body-fonts);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+
