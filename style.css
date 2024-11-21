@@ -74,7 +74,6 @@ h5{
 
 
 header{
-   
     position: fixed;
     width: 100%;
     top: 0px;
@@ -127,6 +126,7 @@ ul {
     width: 100%;
 }
 .nav-logo img{
+    margin-left: 20px;
     width: 28px;
 }
 .nav-list{
@@ -218,11 +218,15 @@ ul {
 }
 .menu-mobile{
     display: none;
+  
 }
 
 
 /* Navigation for mobile devices */
-@media screen and (max-width:580px){
+@media screen and (max-width:768px){
+    .container{
+        width: 580px;
+    }
     .nav{
         justify-content: space-between;
     }
@@ -230,30 +234,55 @@ ul {
     .menu-logo{
         display: block;
     }
+    .menu-logo:hover{
+        
+        color: var(--brand-primary-color);
+    }
     .nav-button{
        display: none;
     }
     .menu-mobile{
+        padding-top: 10px;
         background-color: var(--background-color);
-        margin: 10px 20px 20px 10px;
-        top: 50px;
-        width: 100%;
-        position: absolute;
+        display: block; 
+        padding-left: 20px;
+        padding-right: 20px; 
+        box-sizing: border-box;
+        border-radius: 5px;
+        height: 0px;
+        opacity: 0;
+        transition: height .4s;
+    }
+    .menu-mobile.active{
         display: block;
+        height: 220px;
+        opacity: 1;
     }
-    .nav-list{
-        display: grid;
-        justify-content: start ;
-        row-gap: 12px;
+   
+    .nav-box{
+       
+        padding-top: 10px;
+        padding-bottom: 10px;
+       margin-bottom: 10px;
     }
-    .nav-link{
-        
-        position: relative;
-        width: 200px;
-        background-color: red;
-        left: 20px;
-        text-align: start;
+    .nav-box:hover{
+        border-radius: 3px;
+        border:1px solid var(--accent-color-green);
+        background-color: #dafff393 ;
+        color: var(--accent-color-green);
+    }
+    .a{
+        margin-left: 20px;
         font-size: var(--body-small);
+        font-weight: 400;
+        color: var(--text-color-60);
     }
+    .nav-box:hover .a {
+        color: var(--accent-color-green)
+    }
+    .nav-link::after{
+        bottom: -.3rem;
+    }
+
     
 }
