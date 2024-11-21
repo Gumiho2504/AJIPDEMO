@@ -2,24 +2,79 @@
 :root{
     --body-fonts : "Open Sans", sans-serif;
 
-    /*========== Colors ==========*/
-    --brand-primary-color:  #470e75;      
-    --brand-secondary-color: #8b3ccb;  
+    /*==========Brand Colors ==========*/
+    --brand-primary-color:  #581c87;      
+    --brand-secondary-color: #a855f7;  
     --tertairy-color: #c8fffd;    
     --accent-color-yellow: #ffb836;
-    --accent-color-green: #56cdad;        
-    --background-color: #ecf0f1;   
-    --text-color: #2c3e50;     
+    --accent-color-green: #56cdad;  
+    --accent-color-red: #ff6550 ;
+    --accent-color-blue: #26a4ff;
+    --accebt-color-purple: #7b61ff;     
+    --background-color: #f8f8fd;   
+
+    /*========== Nautrals Colors ==========*/
+
+    --text-color: #25324b;  
+    --text-color-100: #25324b;      
+    --text-color-80: #515b6f; 
+    --text-color-60: #7c8493; 
+    --text-color-40: #a8adb7; 
+    --text-color-20: #e4e5e7; 
+    --text-color-10: #f9fafc; 
+    --text-color-zero: #f8f8fd; 
+
+     /*========== Heading Fonts size ==========*/
+     --heading-1 : 72px;
+     --heading-2 : 48px;
+     --heading-3 : 32px;
+     --heading-4 : 24px;
+     --heading-5 : 20px;
+
+       /*========== Body Fonts size ==========*/
+    --body-xlarge:20px;
+    --body-large:18px;
+    --body-normal:16px;
+    --body-small :14px;
+
+
 
 }
-h1{
+body{
     font-family: var(--body-fonts);
-    font-weight: 72px;
+    background-color: var(--text-color-20);
+}
+
+/*========== H1H2H3H4=========*/
+h1,h2,h3,h4,h5{
+    font-family: var(--body-fonts);
+    line-height: 120%;
+}
+h1{
+    font-size: var(--heading-1);
+    font-weight: bolder;
+}
+h2{
+    font-size: var(--heading-2);
     font-weight: bold;
 }
+h3{
+    font-size: var(--heading-3);
+    font-weight: 600;
+}
+h4{
+    font-size: var(--heading-4);
+    font-weight: 600;
+}
+h5{
+    font-size: var(--heading-5);
+    font-weight: 600;
+}
+
 
 
 header{
+   
     position: fixed;
     width: 100%;
     top: 0px;
@@ -49,26 +104,32 @@ ul {
     margin: auto;
 }
 
-.nav{
-   
+.nav{   
     position: relative;
     padding: 10px 0;
     display: flex;
-    justify-content: space-between;
+    
    
 }
 
 
 .nav-menu{
-    display: flex;
+  
     align-items: center;
     column-gap: 4rem;
+    justify-content: space-between;
+    display: flex;
+    position: relative;
+}
+.nav-button{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 .nav-logo img{
     width: 28px;
 }
 .nav-list{
-    padding-right: 10px;
     position: relative;
     display: flex;
     text-align: center;
@@ -148,5 +209,51 @@ ul {
     font-weight: 600;
 }
 
+.menu-logo{
+    display: none;
+    position: relative;
+    font-size: var(--heading-4);
+    padding-top: 10px;
+    padding-right: 20px;
+}
+.menu-mobile{
+    display: none;
+}
 
 
+/* Navigation for mobile devices */
+@media screen and (max-width:580px){
+    .nav{
+        justify-content: space-between;
+    }
+
+    .menu-logo{
+        display: block;
+    }
+    .nav-button{
+       display: none;
+    }
+    .menu-mobile{
+        background-color: var(--background-color);
+        margin: 10px 20px 20px 10px;
+        top: 50px;
+        width: 100%;
+        position: absolute;
+        display: block;
+    }
+    .nav-list{
+        display: grid;
+        justify-content: start ;
+        row-gap: 12px;
+    }
+    .nav-link{
+        
+        position: relative;
+        width: 200px;
+        background-color: red;
+        left: 20px;
+        text-align: start;
+        font-size: var(--body-small);
+    }
+    
+}
