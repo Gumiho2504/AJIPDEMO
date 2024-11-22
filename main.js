@@ -16,3 +16,30 @@ function MenuBox() {
 if (menuButton) {
     menuButton.addEventListener('click', MenuBox);  // Pass the function reference without calling it
 }
+
+
+
+// Dropdown toggle
+const locationElement = document.querySelector('.location');
+const locationLabal  = document.querySelector('.location-change')
+const dropdown = document.querySelector('.dropdown');
+
+locationElement.addEventListener('click', () => {
+    dropdown.classList.toggle('active');
+});
+
+// Selecting a location
+const dropdownItems = document.querySelectorAll('.dropdown li');
+dropdownItems.forEach(item => {
+    item.addEventListener('click', () => {
+        locationLabal.textContent = item.textContent; // Update location text
+        dropdown.classList.remove('active'); // Close dropdown
+    });
+});
+
+// Close dropdown if clicked outside
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.location-wrapper')) {
+        dropdown.classList.remove('active');
+    }
+});
