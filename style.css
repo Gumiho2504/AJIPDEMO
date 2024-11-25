@@ -84,17 +84,21 @@ main {
 /*========== Header=========*/
 
 header{
-    position: fixed;
+  
+    position: relative;
+    height: 82px;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 100;
     transition: box-shadow .4s;
     background-color: var(--background-color);
+  
 }
 
 ul {
     list-style: none;
+    padding: 0;
   }
   
   a {
@@ -116,8 +120,11 @@ ul {
 
 .nav{   
     position: relative;
-    padding: 10px 0;
+    padding-top: 10px;
+    height: 60px;
     display: flex;
+    margin-bottom: 0;
+ padding-bottom: 0;
     
    
 }
@@ -390,14 +397,14 @@ ul {
 }
 
 .feature-header {
+    height: 29px;
     margin: auto;
     width: 1192px;
     position: relative;
-    top: 30px;
     display: flex;
     justify-content: space-between; /* Align items to the start */
     align-items: center; /* Vertically center the items */
-    padding: 10px;
+    padding-top: 72px;
     gap: 0; /* No space between items */
   }
 
@@ -407,19 +414,21 @@ ul {
   }
 
   .feature-header a {
+
     font-size: 16px;
+    color: var(--brand-primary-color);
     text-decoration: none;
-    color: var(--text-color-100);
-    margin-left: 10px; /* Optional small margin between elements */
+    font-weight: 700;
+     /* Optional small margin between elements */
   }
 
   .job-list{
     margin: auto;
     position: relative;
     width: 1119px;
-    margin-top: 60px;
+    padding-top: 32px;
     display: grid; /* Enable Grid layout */
-    grid-template-columns: repeat(auto-fit, minmax(274px, 1fr)); /* Dynamic columns */
+    grid-template-columns: repeat(4, minmax(274px, 1fr)); /* Dynamic columns */
     gap: 32px; /* 32px space between both rows and columns */
   }
 
@@ -531,14 +540,15 @@ ul {
 
 .job-by-function{
     width: 100%;
-    height: 702px;
+    height: 667px;
     background-color: white;
 }
 .job-by-function-list{
+    padding-top: 48px;
     margin: auto;
     width: 1192px;
+    height: 450px;
     position: relative;
-    margin-top: 60px;
     display: grid; /* Enable Grid layout */
     grid-template-columns: repeat(auto-fit, minmax(274px, 1fr)); /* Dynamic columns */
     gap: 32px; /* 32px space between both rows and columns */
@@ -584,7 +594,20 @@ ul {
     font-size: 48px;
     color: var(--brand-primary-color);
 }
-
+.function-box:hover{
+    background-color: var(--brand-primary-color);
+}
+.function-box:hover .function-icon i{
+    color: white;
+}
+.function-box:hover .function-title h5{
+    color: white;
+}
+    
+.function-box:hover .job-available{
+        color: white;
+}
+       
 /* latest job section */
 
 .latest-job-container{
@@ -659,6 +682,132 @@ ul {
 }
 
 
+/*###################### Job detail ###################### */
+.job-detail-header-box{
+    width: 1440px;
+    height: 295px;
+    margin: auto;
+    display: flex; 
+    justify-content: center; 
+    align-items: center
+            
+}
+.job-details-box{
+    border: 1px solid var(--text-color-20);
+    width: 1187px;
+    height: 139.24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.job-details-logo{
+    width: 88px;
+    height: 91px;
+    background-color: burlywood;
+}
+.job-details-logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.logo-detail{
+    margin-left:24px ;
+    height: 91.24px;
+    display: flex;
+    column-gap: 24px;
+}
+.job-deatail-title{
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+.job-details-title a{
+    font-size: var(--body-small);
+    font-weight: 400;
+    color: var(--text-color-80);
+}
+.apply-share{
+    margin-right: 24px;
+    width: 250px;
+    height: 58.2px;
+    display: flex;
+    justify-content: space-between;
+  
+    align-items: center;
+}
+.apply-share button{
+    border: none;
+    font-size: var(--body-large);
+    background-color: var(--brand-primary-color);
+    width: 158px;
+    height: 57px;
+    color: var(--text-color-zero);
+}
+.apply-share i{
+    font-size: 38px;
+    color: var(--text-color-80);
+}
+
+.line{
+    width: 1px;
+    height: 100%;
+    background-color: var(--text-color-40);
+}
+
+.job-details-about{
+    margin: 32px 144px;
+    height: 1141px;
+    display: flex;
+    justify-content: space-between;
+}
+.left{
+    width: 724px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    row-gap: 24px;
+}
+.left h4{
+    color: var(--text-color-80);
+    font-weight: 400;
+}
+.job-detail-paragrap{
+   display: flex;
+   flex-direction: column;
+   row-gap: 40px;
+   margin: 5px;
+}
+.job-summary,.requirement-box,.requirement-box-list{
+    display: flex;
+   flex-direction: column;
+}
+.job-summary p{
+    font-size: var(--body-small);
+    font-weight: 400;
+    color: var(--text-color-80);
+}
+.job-summary,.requirement-box,.requirement-box-list{
+   row-gap: 16px;
+}
+.requirement-box-list{
+   row-gap: 8px;
+}
+.requirement-box-list span{
+    font-size: var(--body-small);
+    font-weight: 400;
+    color: var(--text-color-80);
+}
+.requirement-box-list i{
+    font-size: var(--heading-5);
+    font-weight: 600;
+    color: var(--text-color-100);
+}
+.right{
+    width: 404px;
+    background-color: #4c3b80;
+}
+
+
 /* Navigation for mobile devices *//* Navigation for mobile devices *//* Navigation for mobile devices *//* Navigation for mobile devices *//* Navigation for mobile devices */
 /* Navigation for mobile devices */  /* Navigation for mobile devices */   /* Navigation for mobile devices */   /* Navigation for mobile devices */   /* Navigation for mobile devices */
 
@@ -725,14 +874,18 @@ ul {
 
     /*========== Main=========*/
     .title-banner{ 
-        height: 402px;
+        position: relative;
+        height: 460px;
+       
     }
     .title-box{
-       top: 60px;
+       top: 100px;
+       width: 430px;
+       left: 0px;
     }
     .title-text,.title-strong{
         font-size: 36px;
-        line-height: 30px;
+        line-height: 41.2px;
     }
     .banner-des{
         font-size: 14px;
@@ -741,8 +894,6 @@ ul {
         display: none;
     }
     .search-box {
-
-        padding: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
@@ -801,12 +952,14 @@ ul {
 
 
     .job-list {
-        display: grid; /* Still use grid */
-        grid-auto-flow: column; /* Items flow horizontally */
-        grid-template-columns: repeat(auto-fit, minmax(332px, 1fr)); /* Define column size */
-        overflow-x: auto; /* Enable horizontal scrolling */
-        gap: 16px; /* Ensure spacing between items */
+        width: 394px;
+        display: grid; 
+        grid-auto-flow: column;
+        grid-template-columns: repeat(auto-fit, minmax(292px, 1fr));
+        overflow-x: auto; 
+        gap: 16px; 
       }
+
     
       .job-list::-webkit-scrollbar {
         height: 8px; /* Optional: Style the scrollbar */
@@ -822,10 +975,165 @@ ul {
       }
 
 
-      /* job by function */
-        .feature-container{
-            height: 448px;
+      /*========== Feature Job=========##############################################################*/
+
+
+.feature-container {
+  
+    height: 448px; 
+}
+
+.feature-header {
+    height: 29px;
+    width: 1192px;  
+    padding-top: 40px;
+  }
+
+  .feature-header h4 strong{
+    font-size: 20px;
+  }
+  
+
+  .feature-header a {
+    position: absolute;
+    font-size: 16px;
+    bottom: -376px;
+     /* Optional small margin between elements */
+  }
+
+  .job-list{
+    padding-top: 24px;
+  }
+  /* .job-box:hover{
+    background-color: var(--brand-primary-color);
+    color: var(--text-color-zero);
+  }
+  .job-box:hover .job-box-title span{
+    color: var(--text-color-zero);
+  }
+  .job-box:hover .job-box-des{
+    color: var(--text-color-zero);
+  }
+  .job-box:hover .c-logo{
+    background-color: var(--text-color-zero);
+  }
+  .job-box:hover .job-box-header .small-button{
+    color: var(--text-color-zero);
+    border: 1px solid #ffffff;
+  } */
+
+
+/* ##########Job By Function #########################*/
+
+    .job-by-function{
+        height: 938px;
+    }
+      
+    .job-by-function-list{
+            padding-top: 24px;
+            margin: auto;
+            width: 394px;
+            grid-template-columns: repeat(1,1fr);
+            gap: 16px; 
+    }
+    .function-box{
+            width: 394px;
+            height: 84px;
+            display: flex; 
+            flex-direction: row;
+            justify-content: flex-start;
+            column-gap: 32px; 
+    }
+    .function-title{
+            padding: 16px 0px;
+            width: 290px;
+            height: 52px;
+            row-gap: 2px; 
         }
+        .function-title h5{
+            margin: 0;
+            color: var(--text-color-100);
+        }
+        .job-available{
+            font-size: 16px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .job-available i{
+            font-size: var(--heading-4);
+            color: var(--text-color-100);
+        }
+        .function-icon{
+            padding: 16px 0px 0px 16px;
+            width: 40px;
+            height: 40px;
+            
+        }
+
+
+
+        /* latest job section */
+
+.latest-job-container{
+    height: 1436px;
+}
+.latest-job-list{
+    margin-top: 16px;
+    width: 394px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Creates 2 equal-width columns */
+    gap: 16px; 
+}
+.latest-job-box{
+    width: 394px;
+    height: 205px;
+    flex-direction: column;
+    row-gap: 24px; 
+}
+.latest-title{
+    padding: 0px 16px;
+    width: 244px;
+    height: 101px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+.latest-job-info{
+    display: flex;
+    column-gap: 8px;
+}
+.company-location{
+    font-size: var(--body-small);
+    font-weight: 400;
+}
+.company-logo{
+    padding-left: 16px;
+    padding-top: 16px;
+    height: 48px;
+    width: 48px;
+}
+.bar{
+    width: 1px;
+    height: 34px;
+}
+.label ,.label-marketing ,.label-design{
+    padding: 10px 6px;
+    border-radius: 80px;
+    font-size: var(--body-small);
+}
+.label{
+    background-color: #56CDAD1A;
+    color: var(--accent-color-green);
+}
+.label-marketing{
+    border: 1px solid var(--accent-color-yellow);
+    color: var(--accent-color-yellow);
+}
+.label-design{
+    border: 1px solid var(--brand-primary-color);
+    color: var(--brand-primary-color);
+}
 
 
 
