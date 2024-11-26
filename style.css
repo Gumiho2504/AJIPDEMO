@@ -528,13 +528,13 @@ ul {
 
 .job-type {
     display: inline-block;
-    padding: 5px 16px; /* Add horizontal and vertical spacing */
-    background-color: rgb(255, 245, 215); /* Set background color */
+    padding: 5px 16px; 
+    background-color: rgb(255, 245, 215); 
     color: var(--accent-color-yellow); 
     font-size: var(--body-small);
     font-weight: 200;
-    border-radius: 80px; /* Add rounded corners for a better appearance */
-    text-align: center; /* Center text horizontally */
+    border-radius: 80px; 
+    text-align: center; 
 }
 /* ##########Job By Function #########################*/
 
@@ -754,11 +754,19 @@ ul {
     background-color: var(--text-color-40);
 }
 
+.job-details-about-container{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+
+}
+
 .job-details-about{
-    margin: 32px 144px;
+    padding: 32px 144px;
     height: 1141px;
     display: flex;
     justify-content: space-between;
+   
 }
 .left{
     width: 724px;
@@ -804,7 +812,106 @@ ul {
 }
 .right{
     width: 404px;
-    background-color: #4c3b80;
+   display: flex;
+   flex-direction: column;
+   
+   row-gap: 40px;
+    
+}
+.about-the-post{
+    width: 380px;
+    height: 338px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.about-the-post h5 {
+    color: var(--text-color-80);
+}
+.progress-box{
+    height: 74px;
+    background-color: var(--text-color-10);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    row-gap: 8px;
+    /* padding: 16px;
+    margin: 16px; */
+  
+}
+.progress-box p{
+    padding-left: 16px;
+    font-size: var(--body-normal);
+    font-weight: bold;
+    margin: 0;
+}
+.progress-box  span{
+    font-weight: 500;
+    color: var(--text-color-80);
+}
+.progress-bar{
+    margin-left: 16px;
+    height: 8px;
+    width: 348px;
+    background-color: var(--text-color-20);
+}
+.inner-progress-bar{
+    
+    height: 100%;
+    width: 148px;
+    background-color: var(--accent-color-green);
+}
+.the-post-box{
+    height: 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.the-post-box .title{
+    font-size: var(--body-normal);
+    font-weight: 400;
+}
+.the-post-box .value{
+    font-size: var(--body-normal);
+    font-weight: 600;
+}
+.about-the-post-line{
+    width: 351px;
+    height: 1px;
+    background-color: var(--text-color-20);
+}
+.about-the-post-functions{
+   
+    height: 82px;
+   width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.about-the-post-functions h5{
+    font-weight: 400;
+}
+.about-the-post-functions-list{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+.job-function-box-1 ,.job-function-box-2{
+    display: inline-block;
+    padding: 5px 16px; 
+    font-size: var(--body-small);
+    font-weight: 200;
+    border-radius: 80px; 
+    text-align: center; 
+}
+.job-function-box-1{
+    background-color: rgb(255, 245, 215); 
+    color: var(--accent-color-yellow); 
+}
+.job-function-box-2{
+    background-color: #56cdadab; 
+    color: var(--accent-color-green); 
 }
 
 
